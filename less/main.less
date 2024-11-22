@@ -1,0 +1,245 @@
+@import "vendors/bootstrap/bootstrap.less";
+@import "vendors/font-awesome/font-awesome.less";
+
+@primary: #26a5d3;
+@dark:#333333;
+@light:#f4f4f4;
+
+html{
+    width:100%;
+    height:100%;
+}
+
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family:"Helvetica neue", Arial, Helvetica, sans-serif;
+    color:@dark;
+    background-color: @light;
+}
+
+//Typography
+
+h1, h2, h3, h4, h5, h6{
+    margin:0 0 35px;
+    text-transform: uppercase;
+    font-family:"Montserrat","Helvetica neue", Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+
+}
+
+p{
+    margin: 0 0 25px;
+    font-size: 18px;
+    line-height: 1.6em;
+
+}
+
+a{
+    color: @primary;
+}
+
+a:hover, a:focus{
+    text-decoration: none;
+    color:darken(@primary, 20%)
+}
+
+.navbar{
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    font-family: "Montserrat","Helvetica neue", Arial, Helvetica, sans-serif;
+    background-color: @dark;
+}
+
+.navbar-brand:focus{
+    outline: none;
+}
+
+.navbar-custom a{
+    color:@light;
+}
+
+.navbar-custom.nav li a{
+
+    -webkit-transition:background .3s ease-in-out;
+    -moz-transition:background .3s ease-in-out;
+    transition:background .3s ease-in-out;
+}
+
+.navbar-custom.nav li a:hover{
+
+    outline: none;
+    background-color: rgba(255,255,255, 0.2);
+}
+
+.navbar-toggle{
+    padding: 4px 6px;
+    font-size: 16px;
+    color:@light;
+}
+
+@media(min-width:767px){
+    .navbar{
+        padding: 20px 0;
+        border-bottom: none;
+        background: transparent;
+    -webkit-transition:background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition:background .5s ease-in-out, padding .5s ease-in-out;
+    transition:background .5s ease-in-out, padding .5s ease-in-out;
+}
+
+    .top-nav-collapse{
+        padding: 0;
+        background-color: @dark;
+    }
+
+    .navbar-custom.top-nav-collapse{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    }
+
+
+    //landing page
+
+    .intro{
+
+        position: relative;
+        display: table;
+        width: 100%;
+        height: auto;
+        padding:100px 0;
+        text-align: center;
+        color:@light;
+        background: url(../images/twilight-productivity-dark-office-interior-photo_960396-64509.jpg) no-repeat bottom center scroll;
+        background-color: @dark;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .intro-body{
+        display:table-cell;
+        vertical-align: middle;
+    }
+
+    .brand-heading{
+        font-size: 40px;
+    }
+
+    .intro-text{
+        font-size:18px;
+    }
+
+    @media(min-width:767px) {
+        .intro{
+            height:100%;
+            padding: 0;
+        }
+
+        .brand-heading{
+            font-size:100px !important;
+        }
+
+        .intro-text{
+            font-size:25px;
+        }
+    }
+
+
+    // content section
+
+    .content-section{
+        padding:70px 0 40px;
+    }
+
+    //icon blocks
+
+    .block-icon-left{
+        overflow: auto;
+
+
+        h1, h2, h3, h4, h5, h6{
+            margin: 0 0 10px 0;
+            padding: 0;
+            font-size: 20px;
+        }
+
+        .icon-content{
+            float: left;
+            width: 70%;
+        }
+
+        .icon{
+            float: left;
+            width: 30%;
+            margin-top: 10px;
+        }
+    }
+
+    .who-section{
+        width: 100%;
+        padding: 50px 0;
+        color:@light;
+        background: url(../images/modern-room-office-black-background-ai-generated-photo.jpg) no-repeat center center scroll;
+        background-color: @dark;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+
+    @media(min-width:767px){
+        .who-section{
+            padding:100px 0;
+        }
+    } 
+
+
+    //client section
+
+    #clients {
+        text-align: center;
+        display: flex;// Use flexbox for layout
+        padding-bottom: 80px; 
+        justify-content: center; // Center the logos
+        flex-wrap: wrap; // Allow logos to wrap to the next line if needed
+    }
+    
+    .img-logo {
+        width: 150px; // Set a specific width for medium logos
+        height: auto; // Maintain aspect ratio
+        margin: 15px; // Space around each logo
+        max-width: 100%; // Ensure responsiveness on smaller screens
+    }
+
+    //contact section
+
+    #contact{
+        background: @dark;
+        color: @light;
+        padding-bottom: 80px;
+    }
+
+    //footer section
+
+    footer{
+        margin-top: 10px;
+        padding-top: 30px;
+        height: 80px;
+        text-align:center;
+    }
+
+    .footer-message{
+        margin-left: auto; /* Push message to the far right */
+    }
+
+
+
+    .page-scroll{
+        -webkit-transition-property: -webkit-transform;
+    
+    }
